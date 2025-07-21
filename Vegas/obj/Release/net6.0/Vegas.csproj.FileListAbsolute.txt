@@ -1,0 +1,15 @@
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\bin\Release\net6.0\Vegas.deps.json
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\bin\Release\net6.0\Vegas.dll
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\bin\Release\net6.0\ref\Vegas.dll
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\bin\Release\net6.0\Vegas.pdb
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\bin\Release\net6.0\Sample EMA.dll
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\bin\Release\net6.0\Sample EMA.pdb
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\obj\Release\net6.0\Vegas.csproj.AssemblyReference.cache
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\obj\Release\net6.0\Vegas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\obj\Release\net6.0\Vegas.AssemblyInfoInputs.cache
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\obj\Release\net6.0\Vegas.AssemblyInfo.cs
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\obj\Release\net6.0\Vegas.csproj.CoreCompileInputs.cache
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\obj\Release\net6.0\Vegas.csproj.CopyComplete
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\obj\Release\net6.0\Vegas.dll
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\obj\Release\net6.0\ref\Vegas.dll
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\obj\Release\net6.0\Vegas.pdb

@@ -1,0 +1,6 @@
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\bin\Release\net6.0\publish\Vegas.dll
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\bin\Release\net6.0\publish\Vegas.deps.json
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\bin\Release\net6.0\publish\Vegas.pdb
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\bin\Release\net6.0\publish\cAlgo.API.dll
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\bin\Release\net6.0\publish\Sample EMA.dll
+C:\Users\zhuw3\Documents\cAlgo\Sources\Indicators\Vegas\Vegas\bin\Release\net6.0\publish\Sample EMA.pdb
