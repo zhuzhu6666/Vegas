@@ -47,28 +47,12 @@ namespace cAlgo.Indicators
         [Parameter("通道颜色", DefaultValue = "LightGray", Group = "通道")]
         public string TunnelColor { get; set; }
 
-        [Parameter("显示成交量", DefaultValue = true, Group = "成交量")]
-        public bool ShowVolume { get; set; }
-
-        [Parameter("上涨颜色", DefaultValue = "Green", Group = "成交量")]
-        public string UpVolumeColor { get; set; }
-
-        [Parameter("下跌颜色", DefaultValue = "Red", Group = "成交量")]
-        public string DownVolumeColor { get; set; }
-
-        [Parameter("柱状图高度比例", DefaultValue = 0.1, MinValue = 0.01, MaxValue = 0.5, Group = "成交量")]
-        public double VolumeHeightRatio { get; set; }
-
-        [Parameter("底部边距补偿", DefaultValue = 0, MinValue = 0, MaxValue = 0.5, Group = "成交量")]
-        public double BottomPaddingOffset { get; set; }
- 
         private readonly List<ExponentialMovingAverage> _emas = new List<ExponentialMovingAverage>();
         private readonly List<IndicatorDataSeries> _emaOutputs = new List<IndicatorDataSeries>();
         private readonly List<int> _emaPeriods = new List<int>();
         
         // 使用线程安全的字典来追踪当前可见的矩形对象，以提高性能
         private readonly ConcurrentDictionary<int, string> _visibleRectangles = new ConcurrentDictionary<int, string>();
-        private readonly ConcurrentDictionary<int, string> _visibleVolumeRectangles = new ConcurrentDictionary<int, string>();
 
         protected override void Initialize()
         {
@@ -141,74 +125,6 @@ namespace cAlgo.Indicators
                 }
             }
 
-            // --- 成交量绘图逻辑 ---
-            if (ShowVolume)
-            {
-                int firstVisibleIndex = Chart.FirstVisibleBarIndex;
-                int lastVisibleIndex = Chart.LastVisibleBarIndex;
-                
-                // 为确保成交量柱始终位于图表底部，我们每次都移除并重绘所有可见的柱状图
-                foreach (var objName in _visibleVolumeRectangles.Values)
-                {
-                    Chart.RemoveObject(objName);
-                }
-                _visibleVolumeRectangles.Clear();
-
-                // 寻找可见范围内的最大成交量用于缩放
-                double maxVolume = 0;
-                for (int i = firstVisibleIndex; i <= lastVisibleIndex; i++)
-                {
-                    if (Bars.TickVolumes[i] > maxVolume)
-                    {
-                        maxVolume = Bars.TickVolumes[i];
-                    }
-                }
-
-                if (maxVolume > 0)
-                {
-                    var chartHeight = Chart.TopY - Chart.BottomY;
-                    // 防止图表高度为零或负数时出错
-                    if (chartHeight <= 0) return;
-
-                    var maxVolumeHeight = chartHeight * VolumeHeightRatio;
-
-                    for (int i = firstVisibleIndex; i <= lastVisibleIndex; i++)
-                    {
-                        if (i < 1) continue;
-
-                        var volume = Bars.TickVolumes[i];
-                        var volumeHeight = (volume / maxVolume) * maxVolumeHeight;
-
-                        // 补偿图表底部的空白间距，将柱状图整体下移，使其固定在窗口底部
-                        var y_offset = chartHeight * BottomPaddingOffset;
-                        var y1 = Chart.BottomY - y_offset;
-                        var y2 = y1 + volumeHeight;
-
-                        var colorName = Bars.ClosePrices[i] >= Bars.OpenPrices[i] ? UpVolumeColor : DownVolumeColor;
-                        var volColor = Color.FromName(colorName);
-                        volColor = Color.FromArgb(150, volColor); // 设置一些透明度
-
-                        var volObjectName = "VolumeBar_" + i;
-                        var time1 = Bars.OpenTimes[i];
-                        var time2 = (i < Bars.Count - 1) ? Bars.OpenTimes[i + 1] : time1 + (time1 - Bars.OpenTimes[i - 1]);
-                        
-                        Chart.DrawRectangle(volObjectName, time1, y1, time2, y2, volColor, 0, LineStyle.Solid).IsFilled = true;
-                        _visibleVolumeRectangles.TryAdd(i, volObjectName);
-                    }
-                }
-            }
-            else
-            {
-                // 如果关闭显示成交量，则移除所有可见的成交量柱
-                if (!_visibleVolumeRectangles.IsEmpty)
-                {
-                    foreach (var objName in _visibleVolumeRectangles.Values)
-                    {
-                        Chart.RemoveObject(objName);
-                    }
-                    _visibleVolumeRectangles.Clear();
-                }
-            }
         }
     
         // 确保指标停止时清理资源
@@ -225,14 +141,6 @@ namespace cAlgo.Indicators
                 _visibleRectangles.Clear();
             }
 
-            if (_visibleVolumeRectangles != null)
-            {
-                foreach (var objName in _visibleVolumeRectangles.Values)
-                {
-                    Chart.RemoveObject(objName);
-                }
-                _visibleVolumeRectangles.Clear();
-            }
             base.OnDestroy();
         }
     }
