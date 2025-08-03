@@ -25,7 +25,8 @@
         "PropertyName": "EMA1",
         "IsUsedInAutoScale": true,
         "IsColorCustomizable": true,
-        "IsLastValueVisibleInTitle": true
+        "IsLastValueVisibleInTitle": true,
+        "Description": ""
       },
       {
         "Name": "EMA2",
@@ -36,7 +37,8 @@
         "PropertyName": "EMA2",
         "IsUsedInAutoScale": true,
         "IsColorCustomizable": true,
-        "IsLastValueVisibleInTitle": true
+        "IsLastValueVisibleInTitle": true,
+        "Description": ""
       },
       {
         "Name": "EMA3",
@@ -47,7 +49,8 @@
         "PropertyName": "EMA3",
         "IsUsedInAutoScale": true,
         "IsColorCustomizable": true,
-        "IsLastValueVisibleInTitle": true
+        "IsLastValueVisibleInTitle": true,
+        "Description": ""
       },
       {
         "Name": "EMA4",
@@ -58,7 +61,8 @@
         "PropertyName": "EMA4",
         "IsUsedInAutoScale": true,
         "IsColorCustomizable": true,
-        "IsLastValueVisibleInTitle": true
+        "IsLastValueVisibleInTitle": true,
+        "Description": ""
       },
       {
         "Name": "EMA5",
@@ -69,10 +73,74 @@
         "PropertyName": "EMA5",
         "IsUsedInAutoScale": true,
         "IsColorCustomizable": true,
-        "IsLastValueVisibleInTitle": true
+        "IsLastValueVisibleInTitle": true,
+        "Description": ""
+      },
+      {
+        "Name": "UpperBand",
+        "Style": "Solid",
+        "PlotType": "Line",
+        "Thickness": 1.0,
+        "Color": "#FFFFFF00",
+        "PropertyName": "UpperBand",
+        "IsUsedInAutoScale": true,
+        "IsColorCustomizable": true,
+        "IsLastValueVisibleInTitle": true,
+        "Description": ""
+      },
+      {
+        "Name": "LowerBand",
+        "Style": "Solid",
+        "PlotType": "Line",
+        "Thickness": 1.0,
+        "Color": "#FFFFFF00",
+        "PropertyName": "LowerBand",
+        "IsUsedInAutoScale": true,
+        "IsColorCustomizable": true,
+        "IsLastValueVisibleInTitle": true,
+        "Description": ""
+      },
+      {
+        "Name": "UpperBand2",
+        "Style": "Solid",
+        "PlotType": "Line",
+        "Thickness": 1.0,
+        "Color": "#FFFFFF00",
+        "PropertyName": "UpperBand2",
+        "IsUsedInAutoScale": true,
+        "IsColorCustomizable": true,
+        "IsLastValueVisibleInTitle": true,
+        "Description": ""
+      },
+      {
+        "Name": "LowerBand2",
+        "Style": "Solid",
+        "PlotType": "Line",
+        "Thickness": 1.0,
+        "Color": "#FFFFFF00",
+        "PropertyName": "LowerBand2",
+        "IsUsedInAutoScale": true,
+        "IsColorCustomizable": true,
+        "IsLastValueVisibleInTitle": true,
+        "Description": ""
       }
     ],
-    "Clouds": [],
+    "Clouds": [
+      {
+        "Line1Name": "UpperBand",
+        "Line2Name": "LowerBand",
+        "Color1": "#00000000",
+        "Color2": "#00000000",
+        "Opacity": 0.2
+      },
+      {
+        "Line1Name": "UpperBand2",
+        "Line2Name": "LowerBand2",
+        "Color1": "#00000000",
+        "Color2": "#00000000",
+        "Opacity": 0.2
+      }
+    ],
     "Parameters": [
       {
         "MinValue": -2147483648,
@@ -83,7 +151,8 @@
         "PropertyName": "EMA1Period",
         "FriendlyName": "EMA1周期",
         "GroupName": null,
-        "IsValueVisibleInTitle": true
+        "IsValueVisibleInTitle": true,
+        "Description": ""
       },
       {
         "MinValue": -2147483648,
@@ -94,7 +163,8 @@
         "PropertyName": "EMA2Period",
         "FriendlyName": "EMA2周期",
         "GroupName": null,
-        "IsValueVisibleInTitle": true
+        "IsValueVisibleInTitle": true,
+        "Description": ""
       },
       {
         "MinValue": -2147483648,
@@ -105,7 +175,8 @@
         "PropertyName": "EMA3Period",
         "FriendlyName": "EMA3周期",
         "GroupName": null,
-        "IsValueVisibleInTitle": true
+        "IsValueVisibleInTitle": true,
+        "Description": ""
       },
       {
         "MinValue": -2147483648,
@@ -116,7 +187,8 @@
         "PropertyName": "EMA4Period",
         "FriendlyName": "EMA4周期",
         "GroupName": null,
-        "IsValueVisibleInTitle": true
+        "IsValueVisibleInTitle": true,
+        "Description": ""
       },
       {
         "MinValue": -2147483648,
@@ -127,7 +199,8 @@
         "PropertyName": "EMA5Period",
         "FriendlyName": "EMA5周期",
         "GroupName": null,
-        "IsValueVisibleInTitle": true
+        "IsValueVisibleInTitle": true,
+        "Description": ""
       },
       {
         "DefaultValue": true,
@@ -135,7 +208,8 @@
         "PropertyName": "ShowTunnel",
         "FriendlyName": "显示通道",
         "GroupName": "通道",
-        "IsValueVisibleInTitle": true
+        "IsValueVisibleInTitle": true,
+        "Description": ""
       },
       {
         "DefaultValue": "LightGray",
@@ -143,59 +217,15 @@
         "PropertyName": "TunnelColor",
         "FriendlyName": "通道颜色",
         "GroupName": "通道",
-        "IsValueVisibleInTitle": true
-      },
-      {
-        "DefaultValue": true,
-        "ParameterType": "Boolean",
-        "PropertyName": "ShowVolume",
-        "FriendlyName": "显示成交量",
-        "GroupName": "成交量",
-        "IsValueVisibleInTitle": true
-      },
-      {
-        "DefaultValue": "Green",
-        "ParameterType": "String",
-        "PropertyName": "UpVolumeColor",
-        "FriendlyName": "上涨颜色",
-        "GroupName": "成交量",
-        "IsValueVisibleInTitle": true
-      },
-      {
-        "DefaultValue": "Red",
-        "ParameterType": "String",
-        "PropertyName": "DownVolumeColor",
-        "FriendlyName": "下跌颜色",
-        "GroupName": "成交量",
-        "IsValueVisibleInTitle": true
-      },
-      {
-        "MinValue": 0.01,
-        "MaxValue": 0.5,
-        "Step": 0.1,
-        "DefaultValue": 0.1,
-        "ParameterType": "Double",
-        "PropertyName": "VolumeHeightRatio",
-        "FriendlyName": "柱状图高度比例",
-        "GroupName": "成交量",
-        "IsValueVisibleInTitle": true
-      },
-      {
-        "MinValue": 0.0,
-        "MaxValue": 0.5,
-        "Step": 0.1,
-        "DefaultValue": 0.0,
-        "ParameterType": "Double",
-        "PropertyName": "BottomPaddingOffset",
-        "FriendlyName": "底部边距补偿",
-        "GroupName": "成交量",
-        "IsValueVisibleInTitle": true
+        "IsValueVisibleInTitle": true,
+        "Description": ""
       }
     ],
     "Capabilities": [],
     "CustomAttributes": [],
     "Sets": [],
     "AddIndicatorsToChart": false,
-    "AdditionalInfoUrl": null
+    "AdditionalInfoUrl": null,
+    "Bars": []
   }
 ]

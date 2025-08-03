@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Vegas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7db409eeb5a2aa19cfc390ec2702751d0f1674ff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16517f2be0660d6e251da84163073c6804a05c0d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Vegas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Vegas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
